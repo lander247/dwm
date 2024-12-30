@@ -1,6 +1,6 @@
 # Personal dwm config
 wowsies
 ## applied patches:
-shiftview.c
-vanitygaps
-xrdb
+- shiftview.c
+- vanitygaps
+- xrdb

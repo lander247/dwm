@@ -10,8 +10,8 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=12:style=Bold" };
-static const char dmenufont[]       = "monospace:size=12:style=Bold";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=12:style=Bold" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=12:style=Bold";
 
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";

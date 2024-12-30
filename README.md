@@ -4,3 +4,4 @@ wowsies
 - shiftview.c
 - vanitygaps
 - xrdb
+- noborder

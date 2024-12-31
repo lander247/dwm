@@ -125,12 +125,12 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	/* custom */
-	{ 0,                            XF86XK_AudioMute,           spawn,          SHCMD("pactl set-sink-mute 0 toggle") },
-	{ 0,                            XF86XK_AudioLowerVolume,    spawn,          SHCMD("pactl set-sink-volume 0 -5%") },
-  { 0,                            XF86XK_AudioRaiseVolume,    spawn,          SHCMD("pactl set-sink-volume 0 +5%") },
-  { 0,                            XF86XK_MonBrightnessUp,     spawn,          SHCMD("brightnessctl s +10%") },
-  { 0,                            XF86XK_MonBrightnessDown,   spawn,          SHCMD("brightnessctl s 10%-") },
-  { 0,                            XK_Print,                   spawn,          {.v = flameshot} },
+	{ 0, XF86XK_AudioMute,                         spawn,                  SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioRaiseVolume,                  spawn,                  SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%- && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+; kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioLowerVolume,                  spawn,                  SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%+ && wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; kill -44 $(pidof dwmblocks)") },
+	{ 0,                            XF86XK_MonBrightnessUp,     spawn,          SHCMD("brightnessctl s +10%") },
+	{ 0,                            XF86XK_MonBrightnessDown,   spawn,          SHCMD("brightnessctl s 10%-") },
+	{ 0,                            XK_Print,                   spawn,          {.v = flameshot} },
 };
 
 /* button definitions */
